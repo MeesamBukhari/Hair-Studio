@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hair Studio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section id="banner">
+      <img src="assets/logo.png" alt="Logo Image" class="logo" />
+      <div class="banner-text">
+        <h1>Hair Studio</h1>
+        <p>Style Your Hair Is Style Your Life</p>
+        <div class="banner-btn">
+          <a href="#"><span></span>Find Out</a>
+          <a href="#"><span></span>Read More</a>
+        </div>
+      </div>
+    </section>
+
+    <div id="sideNav">
+      <nav>
+        <ul>
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">FEATURES</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">TESTIMONIALS</a></li>
+          <li><a href="#">MEET US</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="menuBtn">
+      <img src="assets/menu.png" id="menu" />
+    </div>
+
+    <script>
+      var menuBtn = document.getElementById("menuBtn");
+      var sideNav = document.getElementById("sideNav");
+      var menu = document.getElementById("menu");
+
+      sideNav.style.right = "-250px";
+
+      menuBtn.onclick = function () {
+        if (sideNav.style.right == "-250px") {
+          sideNav.style.right = "0";
+          menu.src = "assets/close.png";
+        } else {
+          sideNav.style.right = "-250px";
+          menu.src = "assets/menu.png";
+        }
+      };
+    </script>
+  </body>
+</html>
